@@ -1,0 +1,24 @@
+
+.encabezado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.encabezado-titulo {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #1F2937;
+  text-align: center;
+}
+
+.encabezado-descripcion {
+  margin: 0;
+  font-size: 16px;
+  color: #4B5563;
+  line-height: 24px;
+  text-align: center;
+}
