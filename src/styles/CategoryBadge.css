@@ -1,0 +1,27 @@
+.category-badge {
+  display: inline-flex;
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #FFFFFF;
+  font-size: 21px;
+}
+
+.category-badge--comida {
+  background-color: #16A34A;
+}
+
+.category-badge--transporte {
+  background-color: #2563EB;
+}
+
+.category-badge--servicios {
+  background-color: #9333EA;
+}
+
+.category-badge--otros {
+  background-color: #EA580C;
+}

@@ -1,0 +1,43 @@
+.home-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(24px + env(safe-area-inset-top, 0px))
+    24px
+    calc(24px + env(safe-area-inset-bottom, 0px));
+  background-color: #F3F4F6;
+}
+
+.home-card {
+  width: 100%;
+  max-width: 480px;
+  box-sizing: border-box;
+  padding: 28px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  text-align: center;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
+}
+
+.home-icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px;
+  object-fit: contain;
+}
+
+.home-title {
+  margin: 0 0 24px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #2563EB;
+  text-align: center;
+}
+
+.home-button-space {
+  margin-top: 12px;
+}

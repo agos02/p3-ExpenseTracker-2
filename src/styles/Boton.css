@@ -1,0 +1,56 @@
+.boton {
+  width: 100%;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Variante principal: botón azul con texto blanco. */
+.boton-primario {
+  background-color: #2563EB;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.boton-primario:hover {
+  background-color: #1D4ED8;
+}
+
+/* Variante secundaria: fondo blanco con borde azul. */
+.boton-secundario {
+  border: 1px solid #2563EB;
+  background-color: #FFFFFF;
+  color: #2563EB;
+  font-weight: bold;
+}
+
+.boton-secundario:hover {
+  background-color: #EFF6FF;
+}
+
+/* Variante enlace: texto azul sin fondo. */
+.boton-enlace {
+  width: auto;
+  padding: 8px;
+  background-color: transparent;
+  color: #2563EB;
+  font-weight: 600;
+}
+
+.boton-enlace:hover {
+  text-decoration: underline;
+}
+
+.boton:focus-visible {
+  outline: 3px solid #93C5FD;
+  outline-offset: 3px;
+}
+
+.boton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
