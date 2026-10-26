@@ -56,21 +56,6 @@
   list-style: none;
 }
 
-.expenses-screen__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  padding: 18px;
-  border-radius: 10px;
-  background: #FFFFFF;
-  box-shadow: 0 3px 10px rgb(0 0 0 / 7%);
-  font-size: 16px;
-}
-
-.expenses-screen__item span { min-width: 0; overflow-wrap: anywhere; }
-.expenses-screen__item strong { flex-shrink: 0; color: #2563EB; }
-
 .expenses-screen__actions {
   display: flex;
   flex-direction: column;
