@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import MainLayout from '../layouts/MainLayout'
 import HomeScreen from '../pages/HomeScreen'
 import ExpensesScreen from '../pages/ExpensesScreen'
@@ -18,17 +18,9 @@ export default function AppRouter() {
     <Routes>
       <Route element={<MainLayout />}>
         <Route index element={<HomeScreen />} />
-        <Route path="gastos" element={<ExpensesScreen />} />
-
-        {/* Se conserva la ruta del formulario del sprint anterior. */}
-        <Route path="gastos/nuevo" element={<ExpensesScreen />} />
-
-        {/* Ruta solicitada y alias para enlaces anteriores en español. */}
-        <Route path="expenses" element={<Navigate to="/gastos" replace />} />
+        <Route path="expenses" element={<ExpensesScreen />} />
         <Route path="expenses/:id" element={<ExpenseDetailScreen />} />
-        <Route path="gastos/:id" element={<ExpenseDetailScreen />} />
-
-        <Route path="configuracion" element={<PaginaPendiente titulo="Ajustes" />} />
+        <Route path="settings" element={<PaginaPendiente titulo="Ajustes" />} />
       </Route>
     </Routes>
   )

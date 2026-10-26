@@ -1,20 +1,14 @@
 import { useState } from 'react'
-import { NavLink, Outlet, useMatch, useNavigate } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 import NewExpenseModal from '../components/NewExpenseModal'
 import '../styles/MainLayout.css'
 
 export default function MainLayout() {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const navigate = useNavigate()
-  const isNewExpenseUrl = Boolean(useMatch('/gastos/nuevo'))
 
   // Modal único compartido por Inicio y Gastos.
   const openNewExpenseModal = () => setIsModalOpen(true)
-  const closeNewExpenseModal = () => {
-    setIsModalOpen(false)
-    // Conservamos el acceso directo existente /gastos/nuevo.
-    if (isNewExpenseUrl) navigate('/gastos', { replace: true })
-  }
+  const closeNewExpenseModal = () => setIsModalOpen(false)
 
   return (
     <div className="main-layout">
@@ -35,7 +29,7 @@ export default function MainLayout() {
         </NavLink>
 
         <NavLink
-          to="/gastos"
+          to="/expenses"
           className={({ isActive }) =>
             `bottom-navigation-link ${isActive ? 'active' : ''}`
           }
@@ -45,7 +39,7 @@ export default function MainLayout() {
         </NavLink>
 
         <NavLink
-          to="/configuracion"
+          to="/settings"
           className={({ isActive }) =>
             `bottom-navigation-link ${isActive ? 'active' : ''}`
           }
@@ -55,9 +49,7 @@ export default function MainLayout() {
         </NavLink>
       </nav>
 
-      {(isModalOpen || isNewExpenseUrl) && (
-        <NewExpenseModal onClose={closeNewExpenseModal} />
-      )}
+      {isModalOpen && <NewExpenseModal onClose={closeNewExpenseModal} />}
     </div>
   )
 }

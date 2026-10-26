@@ -34,7 +34,7 @@ export default function ExpenseDetailScreen() {
     if (window.history.state?.idx > 0) {
       navigate(-1)
     } else {
-      navigate('/gastos')
+      navigate('/expenses')
     }
   }
 
@@ -86,7 +86,7 @@ export default function ExpenseDetailScreen() {
           <section className="expense-detail__card expense-detail__missing" role="status">
             <h2>Gasto no encontrado</h2>
             <p>No existe un gasto con el identificador «{id}».</p>
-            <button type="button" onClick={() => navigate('/gastos')}>
+            <button type="button" onClick={() => navigate('/expenses')}>
               Ver listado de gastos
             </button>
           </section>

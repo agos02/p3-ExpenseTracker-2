@@ -65,7 +65,7 @@ export default function HomeScreen() {
             <Boton
               titulo="Ver Listado Completo"
               variante="secundario"
-              onPress={() => navigate('/gastos')}
+              onPress={() => navigate('/expenses')}
             />
           </div>
         </section>
