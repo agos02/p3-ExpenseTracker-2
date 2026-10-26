@@ -1,0 +1,97 @@
+.expense-detail {
+  min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  padding: calc(24px + env(safe-area-inset-top, 0px)) 20px 32px;
+  background: #F3F4F6;
+  color: #1F2937;
+}
+
+.expense-detail__container { width: 100%; max-width: 480px; }
+.expense-detail__header { text-align: left; margin-bottom: 20px; }
+.expense-detail__header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0;
+  color: #1F2937;
+  margin: 16px 0 8px;
+}
+.expense-detail__header p { font-size: 15px; color: #4B5563; }
+.expense-detail__back {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid #BFDBFE;
+  background: #FFFFFF;
+  color: #2563EB;
+  border-radius: 9px;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.expense-detail__back:focus-visible, .expense-detail__missing button:focus-visible {
+  outline: 3px solid #93C5FD;
+  outline-offset: 2px;
+}
+
+.expense-detail__card {
+  border-radius: 16px;
+  padding: 22px;
+  background: #FFFFFF;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+  text-align: left;
+}
+.expense-detail__hero { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+.expense-detail__hero-text { min-width: 0; }
+.expense-detail__hero h2 {
+  font-size: 22px;
+  line-height: 1.2;
+  color: #1F2937;
+  font-weight: 700;
+  margin: 0 0 4px;
+  overflow-wrap: anywhere;
+}
+.expense-detail__hero p { color: #6B7280; font-size: 14px; }
+.expense-detail__fields { margin: 0; display: flex; flex-direction: column; }
+.expense-detail__field {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 15px 0;
+  border-top: 1px solid #E5E7EB;
+}
+.expense-detail__field dt { color: #6B7280; font-size: 14px; }
+.expense-detail__field dd {
+  margin: 0;
+  font-size: 15px;
+  color: #1F2937;
+  font-weight: 600;
+  text-align: right;
+  overflow-wrap: anywhere;
+}
+.expense-detail__field .expense-detail__amount { color: #2563EB; font-size: 20px; font-weight: 700; }
+.expense-detail__field--notes { flex-direction: column; }
+.expense-detail__field--notes dd { font-weight: 400; text-align: left; line-height: 1.5; }
+.expense-detail__missing h2 { font-weight: 700; font-size: 20px; color: #1F2937; }
+.expense-detail__missing p { margin: 12px 0 20px; color: #4B5563; }
+.expense-detail__missing button {
+  min-height: 44px;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background: #2563EB;
+  color: #FFFFFF;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+@media (max-width: 360px) {
+  .expense-detail__card { padding: 16px; }
+  .expense-detail__field { flex-direction: column; gap: 5px; }
+  .expense-detail__field dd { text-align: left; }
+}
