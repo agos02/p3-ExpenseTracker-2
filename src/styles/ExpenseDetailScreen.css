@@ -95,3 +95,6 @@
   .expense-detail__field { flex-direction: column; gap: 5px; }
   .expense-detail__field dd { text-align: left; }
 }
+
+.expense-detail__back:active { background: #EFF6FF; }
+.expense-detail__missing button:active { background: #1E40AF; }

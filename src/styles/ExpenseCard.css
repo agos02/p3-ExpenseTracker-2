@@ -38,3 +38,5 @@
   .expense-card__link { gap: 8px; padding: 12px; }
   .expense-card__amount { font-size: 14px; }
 }
+
+.expense-card__link:active { background-color: #DBEAFE; }

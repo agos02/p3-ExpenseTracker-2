@@ -54,3 +54,20 @@
   opacity: 0.5;
   cursor: not-allowed;
 }
+
+/* Feedback al presionar (táctil y mouse). */
+.boton:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.boton-primario:active:not(:disabled) {
+  background-color: #1E40AF;
+}
+
+.boton-secundario:active:not(:disabled) {
+  background-color: #DBEAFE;
+}
+
+.boton-enlace:active:not(:disabled) {
+  opacity: 0.6;
+}

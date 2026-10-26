@@ -230,3 +230,13 @@
 @media (prefers-reduced-motion: reduce) {
   .new-expense-modal { animation: none; }
 }
+
+/* Feedback al presionar. */
+.new-expense-modal__chip:not(.new-expense-modal__chip--selected):active {
+  background: #DBEAFE;
+}
+
+.new-expense-modal__chip--selected:active { background: #1D4ED8; }
+.new-expense-modal__close:active { background: #E5E7EB; }
+.new-expense-modal__save:active { background: #1E40AF; }
+.new-expense-modal__cancel:active { background: #DBEAFE; }
