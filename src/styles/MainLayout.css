@@ -9,6 +9,15 @@
 .main-layout-content {
   flex: 1;
   min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cada pantalla ocupa el espacio disponible sobre la barra inferior.
+   Se anula su min-height de 100dvh para que no se sume a la barra. */
+.main-layout-content > main {
+  flex: 1;
+  min-height: 0;
 }
 
 .bottom-navigation {
