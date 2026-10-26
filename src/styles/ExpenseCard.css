@@ -1,0 +1,40 @@
+/* Cada elemento del listado reutiliza esta tarjeta enlazada. */
+.expense-card {
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 7%);
+}
+
+.expense-card__link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 72px;
+  padding: 14px;
+  border-radius: inherit;
+  color: #1F2937;
+  text-decoration: none;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.expense-card__link:hover { background-color: #EFF6FF; }
+.expense-card__link:focus-visible { outline: 3px solid #2563EB; outline-offset: 2px; }
+
+.expense-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+}
+
+.expense-card__name { font-size: 16px; font-weight: 700; overflow-wrap: anywhere; }
+.expense-card__category { font-size: 13px; color: #6B7280; }
+.expense-card__amount { font-size: 16px; color: #2563EB; white-space: nowrap; }
+.expense-card__arrow { font-size: 26px; color: #6B7280; line-height: 1; }
+
+@media (max-width: 360px) {
+  .expense-card__link { gap: 8px; padding: 12px; }
+  .expense-card__amount { font-size: 14px; }
+}
