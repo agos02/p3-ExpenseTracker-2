@@ -1,0 +1,76 @@
+
+.install-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  z-index: 100;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 16px;
+
+  border: 1px solid #DBEAFE;
+  border-radius: 14px;
+  background-color: #FFFFFF;
+  color: #1F2937;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 16%);
+  text-align: left;
+}
+
+.install-banner-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.install-banner-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.install-banner-title {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.install-banner-content p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.install-banner-action {
+  padding: 11px 14px;
+  border: none;
+  border-radius: 10px;
+  background-color: #2563EB;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.install-banner-action:hover {
+  background-color: #1D4ED8;
+}
+
+.install-banner-action:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.install-banner-close {
+  border: none;
+  background: transparent;
+  color: #6B7280;
+  font-size: 22px;
+  cursor: pointer;
+}

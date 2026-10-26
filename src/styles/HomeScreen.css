@@ -1,43 +1,152 @@
+
+/* Pantalla principal */
 .home-screen {
   min-height: 100vh;
   min-height: 100dvh;
   box-sizing: border-box;
+
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: calc(24px + env(safe-area-inset-top, 0px))
-    24px
-    calc(24px + env(safe-area-inset-bottom, 0px));
+
+  padding: 0 20px 32px;
+
   background-color: #F3F4F6;
 }
 
-.home-card {
+/* Contenedor */
+.home-container {
   width: 100%;
   max-width: 480px;
-  box-sizing: border-box;
-  padding: 28px;
-  border-radius: 16px;
-  background-color: #FFFFFF;
-  text-align: center;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 12%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
+/* Encabezado con área segura */
+.home-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding-top: calc(
+    24px + env(safe-area-inset-top, 0px)
+  );
+}
+
+/* Ícono */
 .home-icon {
-  display: block;
   width: 80px;
   height: 80px;
-  margin: 0 auto 16px;
   object-fit: contain;
+  margin-bottom: 12px;
 }
 
+/* Nombre */
 .home-title {
-  margin: 0 0 24px;
+  margin: 0;
+  color: #2563EB;
   font-size: 28px;
   font-weight: bold;
-  color: #2563EB;
+}
+
+/* Tarjetas */
+.home-card {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 24px;
+
+  background-color: #FFFFFF;
+  border-radius: 16px;
+
+  box-shadow: 0 4px 12px
+    rgb(0 0 0 / 10%);
+
   text-align: center;
 }
 
-.home-button-space {
-  margin-top: 12px;
+/* Bienvenida */
+.home-welcome {
+  margin: 0 0 12px;
+  color: #1F2937;
+  font-size: 26px;
+  font-weight: bold;
 }
+
+.home-description {
+  color: #4B5563;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Títulos de secciones */
+.home-section-title {
+  margin: 0 0 18px;
+  color: #1F2937;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Resumen */
+.home-summary-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Datos del resumen */
+.home-stat {
+  flex: 1 1 140px;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  padding: 16px 10px;
+  border-radius: 12px;
+  background-color: #EFF6FF;
+}
+
+.home-stat-label {
+  font-size: 14px;
+  color: #4B5563;
+}
+
+.home-stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563EB;
+  overflow-wrap: anywhere;
+}
+
+/* Accesos rápidos */
+.home-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Adaptación a celulares */
+@media (max-width: 480px) {
+  .home-screen {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .home-card {
+    padding: 20px;
+  }
+
+  .home-welcome {
+    font-size: 24px;
+  }
+
+  .home-stat-value {
+    font-size: 21px;
+  }
+}
+
