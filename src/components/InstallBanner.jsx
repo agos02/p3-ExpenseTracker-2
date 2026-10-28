@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { usePWAInstall } from '../hooks/usePWAInstall'
-import './InstallBanner.css'
+import '../styles/InstallBanner.css'
 
 export default function InstallBanner() {
   const { isIOS, isInstalled, canInstall, isInstalling, install } = usePWAInstall()
@@ -14,16 +14,16 @@ export default function InstallBanner() {
   if (!isIOS && !canInstall) return null
 
   return (
-    <aside className="expense-pwa-banner" aria-label="Instalación de ExpenseTracker">
+    <aside className="install-banner" aria-label="Instalación de ExpenseTracker">
       <img
-        className="expense-pwa-icon"
+        className="install-banner-icon"
         src="/icons/icon-192.png"
         alt=""
-        width="52"
-        height="52"
+        width="48"
+        height="48"
       />
-      <div className="expense-pwa-content">
-        <strong className="expense-pwa-title">Instalá ExpenseTracker</strong>
+      <div className="install-banner-content">
+        <strong className="install-banner-title">Instalá ExpenseTracker</strong>
         {isIOS ? (
           <p>
             En Safari, tocá <strong>Compartir</strong> y después
@@ -35,7 +35,7 @@ export default function InstallBanner() {
         {!isIOS && (
           <button
             type="button"
-            className="expense-pwa-button"
+            className="install-banner-action"
             disabled={isInstalling}
             onClick={install}
           >
@@ -45,7 +45,7 @@ export default function InstallBanner() {
       </div>
       <button
         type="button"
-        className="expense-pwa-close"
+        className="install-banner-close"
         aria-label="Cerrar aviso de instalación"
         onClick={() => setDismissed(true)}
       >

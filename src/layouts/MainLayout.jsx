@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
+import InstallBanner from '../components/InstallBanner'
 import NewExpenseModal from '../components/NewExpenseModal'
 import '../styles/MainLayout.css'
 
@@ -50,6 +51,8 @@ export default function MainLayout() {
       </nav>
 
       {isModalOpen && <NewExpenseModal onClose={closeNewExpenseModal} />}
+
+      <InstallBanner />
     </div>
   )
 }
