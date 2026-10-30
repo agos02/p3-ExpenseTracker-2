@@ -1,16 +1,39 @@
-# React + Vite
+# ExpenseTracker PWA
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Versión web (Progressive Web App) de **ExpenseTracker**, migrada desde la app React Native del Sprint 1 (repositorio GastosDiarios-P3). Está hecha con React, Vite y React Router, y se puede instalar en el teléfono y usar sin conexión.
 
-Currently, two official plugins are available:
+## URL publicada
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://p3-expense-tracker-2.vercel.app
 
-## React Compiler
+## Cómo ejecutarlo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the Oxlint configuration
+El Service Worker solo funciona en la versión de producción. Para probarlo:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```bash
+npm run build
+npm run preview
+```
+
+Después abrí `http://localhost:4173/`.
+
+## Capturas: Expo Go vs. PWA instalada
+
+| Pantalla | Expo Go (React Native) | PWA instalada |
+| --- | --- | --- |
+| Inicio | <img src="capturas/expoGo-inicio.jpeg" width="220" alt="Inicio en Expo Go"> | <img src="capturas/pwa-inicio.jpeg" width="220" alt="Inicio en la PWA"> |
+| Listado de gastos | <img src="capturas/expoGo-gastos.jpeg" width="220" alt="Gastos en Expo Go"> | <img src="capturas/pwa-gastos.jpeg" width="220" alt="Gastos en la PWA"> |
+| Detalle del gasto | <img src="capturas/expoGo-detalle.jpeg" width="220" alt="Detalle en Expo Go"> | <img src="capturas/pwa-detalle.jpeg" width="220" alt="Detalle en la PWA"> |
+| Ajustes | <img src="capturas/expoGo-ajustes.jpeg" width="220" alt="Ajustes en Expo Go"> | <img src="capturas/pwa-ajustes.jpeg" width="220" alt="Ajustes en la PWA"> |
+| Formulario de nuevo gasto | <img src="capturas/expoGo-formulario.jpeg" width="220" alt="Formulario en Expo Go"> | <img src="capturas/pwa-formulario.jpeg" width="220" alt="Formulario en la PWA"> |
+
+## Instalación y modo sin conexión
+
+| Ícono en la pantalla de inicio | App funcionando sin conexión (modo avión) |
+| --- | --- |
+| <img src="capturas/pwa-icono.jpeg" width="220" alt="Ícono de la app instalada"> | <img src="capturas/pwa-offline.jpeg" width="220" alt="App sin conexión"> |
