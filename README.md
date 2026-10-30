@@ -37,3 +37,30 @@ Después abrí `http://localhost:4173/`.
 | Ícono en la pantalla de inicio | App funcionando sin conexión (modo avión) |
 | --- | --- |
 | <img src="capturas/pwa-icono.jpeg" width="220" alt="Ícono de la app instalada"> | <img src="capturas/pwa-offline.jpeg" width="220" alt="App sin conexión"> |
+
+## Informe de Lighthouse (Mobile)
+
+Auditoría ejecutada sobre la versión publicada, en modo Mobile.
+
+| Performance | Accessibility | Best Practices | SEO |
+| --- | --- | --- | --- |
+| 100 | 100 | 100 | 92 |
+
+<img src="capturas/lighthouse-mobile.png" width="600" alt="Informe de Lighthouse en modo Mobile">
+
+## Comparación: React Native (Expo) vs. PWA (React + Vite)
+
+| Aspecto | React Native (Sprint 1) | PWA (Sprint 2) |
+| --- | --- | --- |
+| Ejecución y distribución | Se prueba con Expo Go en el teléfono | Se abre desde una URL HTTPS y se instala desde el navegador, sin tiendas |
+| Componentes de interfaz | `View`, `Text`, `Pressable`, `TextInput` | HTML semántico: `main`, `header`, `section`, `button`, `input`, `dialog` |
+| Estilos | `StyleSheet.create()` | Archivos `.css`, con `media queries` para adaptarse al ancho |
+| Navegación | React Navigation: Stack y Tab Navigator | React Router: `Routes`, `Outlet` y `NavLink`; cada pantalla tiene su propia URL |
+| Datos hacia el detalle | Se envía el objeto completo con `navigation.navigate(..., { gasto })` | Se envía solo el `id` en la URL (`/expenses/:id`) y se lee con `useParams()`; el detalle sigue funcionando al recargar |
+| Formulario de alta | Pantalla del Stack con `presentation: 'modal'` | Componente con `<dialog>` + `showModal()` y `createPortal`, con animación de hoja inferior |
+| Teclado numérico | `keyboardType="decimal-pad"` | `inputMode="decimal"` |
+| Zonas seguras | `SafeAreaView` | `env(safe-area-inset-*)` y `viewport-fit=cover` |
+| Íconos | Ionicons de `@expo/vector-icons` | Caracteres Unicode |
+| Identidad de la app | `app.json` (nombre, ícono) | `manifest.json` más metaetiquetas para iOS |
+| Uso sin conexión | La app se ejecuta de forma local | Requiere un Service Worker (`vite-plugin-pwa`) que guarda los archivos en caché |
+| Datos de gastos | Los gastos nuevos se guardan en memoria, en el estado de la app | Se usan datos de ejemplo (`mockExpenses.js`); el sprint no pedía guardar |
